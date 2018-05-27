@@ -140,6 +140,7 @@ function Add-VSTeamSonarQubeEndpoint {
 
       try {
          return Add-VSTeamServiceEndpoint `
+            -ProjectName $ProjectName `
             -endpointName $endpointName `
             -endpointType 'azurerm' `
             -object $obj
@@ -214,6 +215,7 @@ function Add-VSTeamAzureRMServiceEndpoint {
       }
 
       return Add-VSTeamServiceEndpoint `
+         -ProjectName $ProjectName `
          -endpointName $endpointName `
          -endpointType 'azurerm' `
          -object $obj
@@ -265,6 +267,7 @@ function Add-VSTeamKubernetesEndpoint {
       }
 
       return Add-VSTeamServiceEndpoint `
+         -ProjectName $ProjectName `
          -endpointName $endpointName `
          -endpointType 'kubernetes' `
          -object $obj
